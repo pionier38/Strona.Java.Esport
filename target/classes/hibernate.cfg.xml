@@ -27,9 +27,9 @@
 
         <property name="show_sql">true</property>
 
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
 
-        <mapping class="pl.edu.zse.gry.model.User"/>
-        <mapping class="pl.edu.zse.gry.model.Game"/>
+        <mapping class="polskie.grupy.esportowe.structur.model.User"/>
+        <mapping class="polskie.grupy.esportowe.structur.model.Game"/>
     </session-factory>
 </hibernate-configuration>

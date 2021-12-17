@@ -16,7 +16,7 @@
         <input type="text" placeholder="Cena" th:field="*{game.price}">
         <input type="text" placeholder="Sztuk" th:field="*{game.available}">
         <select th:field="*{game.console}">
-            <option th:each="console : ${T(pl.edu.zse.gry.model.Game.Console).values()}"
+            <option th:each="console : ${T(polskie.grupy.esportowe.structur.model.Game.Console).values()}"
                     th:value="${console}" th:text="${console}"></option>
         </select>
         <input type="submit" value="Dodaj">
