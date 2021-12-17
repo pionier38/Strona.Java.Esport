@@ -7,6 +7,7 @@ import polskie.grupy.esportowe.structur.dao.IUserDAO;
 import polskie.grupy.esportowe.structur.model.User;
 import polskie.grupy.esportowe.structur.services.IAuthenticationService;
 import polskie.grupy.esportowe.structur.session.SessionObject;
+import polskie.grupy.esportowe.structur.validator.Validator;
 
 import javax.annotation.Resource;
 import java.util.Optional;

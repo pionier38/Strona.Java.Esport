@@ -11,12 +11,12 @@
 </div>
 
 <div th:fragment="menu" class="menu">
-    <a href="/main">Main</a>
-    <a href="/games">Gry</a>
-    <a href="/games/add" th:if="${user?.privileges?.name() == 'ADMIN'}">Dodaj grę</a>
+    <a href="/main">Home</a>
+    <a href="/games">???</a>
+    <a href="/games/add" th:if="${user?.privileges?.name() == 'ADMIN'}">Dodaj Turniej</a>
     <a href="/login" th:if="${user == null}">Zaloguj</a>
     <a href="/logout" th:if="${user != null}">Wyloguj</a>
-    <a href="/contact">Kontakt</a>
+    <a href="/contact">Contact</a>
 </div>
 
 </body>

@@ -20,12 +20,8 @@ public class GameDAO implements IGameDAO {
     @Override
     public List<Game> getAllConsoles() {
         Session session = this.sessionFactory.openSession();
-        String hql = "FROM pl.edu.zse.gry.model.Game GROUP BY console";
+        String hql = "FROM polskie.grupy.esportowe.structur.model.Game GROUP BY console";
         List<Game> list = session.createQuery(hql).getResultList();
-        /*for(int i=0; i<list.size(); i++) {
-            Object[] row = (Object[]) list.get(i);
-            System.out.println(row[0]+", "+ row[1]);
-        }*/
         session.close();
         return list;
     }
@@ -34,7 +30,7 @@ public class GameDAO implements IGameDAO {
     public List<Game> getGamesByConsole(Game.Console console) {
         Session session = this.sessionFactory.openSession();
         Query<Game> query = session
-                .createQuery("FROM pl.edu.zse.gry.model.Game WHERE console = :console");
+                .createQuery("FROM polskie.grupy.esportowe.structur.model.Game WHERE console = :console");
         query.setParameter("console", console);
         List<Game> games = query.getResultList();
         session.close();

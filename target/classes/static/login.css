@@ -19,7 +19,7 @@
 }
 
 #login-form input[type="submit"] {
-    width: 100px;
+    width: 150px;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -39,7 +39,29 @@
 
 #register-button {
     display: block;
-    margin: 10px auto;
+    margin: auto;
     width: 100px;
     text-align: center;
+    color:black;
+    text-decoration:none;
+}
+#login_to_register_button{
+width: 150px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin:  5px auto;
+    display: block;
+    transition: border, color 0.5s;
+    cursor: pointer;
+}
+#login_to_register_button:hover{
+    border: 1px solid #af0184;
+    color: #af0184;
+}
+#register-button:hover{
+    color: #af0184;
 }
