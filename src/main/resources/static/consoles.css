@@ -1,0 +1,18 @@
+.console {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+    margin: 10px auto;
+    line-height: 200px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    transition: border, color 0.5s;
+}
+
+.console:hover {
+    border: 1px solid #af0184;
+    color: #af0184;
+}

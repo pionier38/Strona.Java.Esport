@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<div class="content">
+    <form method="post" id="login-form">
+        <input type="text" placeholder="Tytuł" th:field="*{game.title}">
+        <input type="text" placeholder="Cena" th:field="*{game.price}">
+        <input type="text" placeholder="Sztuk" th:field="*{game.available}">
+        <select th:field="*{game.console}">
+            <option th:each="console : ${T(pl.edu.zse.gry.model.Game.Console).values()}"
+                    th:value="${console}" th:text="${console}"></option>
+        </select>
+        <input type="submit" value="Dodaj">
+    </form>
+</div>
+</body>
+</html>

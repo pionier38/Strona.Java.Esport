@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="consoles.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<div class="content">
+    <a th:each="console : ${consoles}"
+       th:text="${console}"
+       th:href="@{/games/{console}(console=${console})}"
+       class="console">
+    </a>
+</div>
+</body>
+</html>

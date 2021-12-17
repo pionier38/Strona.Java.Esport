@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/game.css">
+</head>
+<body>
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<div class="content">
+    <div th:each="game : ${games}" class="game">
+        <div th:text="${game.title}" class="title"></div>
+        <div th:text="${game.price}" class="price"></div>
+        <div th:text="'Dostępnych: ' + ${game.available}" class="available"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.game {
+    width: 80%;
+    border: 1px solid black;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: border 0.5s;
+    padding: 5px;
+}
+
+.game:hover {
+    border: 1px solid #af0184;
+}
+
+.game .title {
+    width: 50%;
+    display: inline-block;
+}
+
+.game .price {
+    width: 24%;
+    display: inline-block;
+}
+
+.game .available {
+    width: 24%;
+    display: inline-block;
+}
