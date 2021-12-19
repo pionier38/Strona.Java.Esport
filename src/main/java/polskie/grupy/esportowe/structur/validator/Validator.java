@@ -39,4 +39,7 @@ public class Validator {
             throw new ValidationException("Login must have minimum 5 chars !");
         }
     }
+    public static boolean validateRegister(){
+        return true;
+    }
 }
