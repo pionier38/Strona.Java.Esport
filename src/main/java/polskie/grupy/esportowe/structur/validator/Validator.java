@@ -1,8 +1,11 @@
 package polskie.grupy.esportowe.structur.validator;
 
 
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 import polskie.grupy.esportowe.structur.exceptions.ValidationException;
 
+import java.io.StringWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,7 +42,15 @@ public class Validator {
             throw new ValidationException("Login must have minimum 5 chars !");
         }
     }
-    public static boolean validateRegister(){
+    public static boolean validateRegister(String login,String password){
+        try {
+            validateLogin(login);
+            validatePassword(password);
+           //validateName(name);
+        }
+        catch (ValidationException e){
+            return false;
+        }
         return true;
     }
 }
